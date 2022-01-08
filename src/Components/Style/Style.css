@@ -1,0 +1,202 @@
+body{
+  margin: 0px;
+  padding: 6px;
+}
+.FlexRow{
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+
+}
+.flexCol{
+  display: flex;
+  flex-direction: column;
+}
+.virticalText{
+    transform: rotate(-90deg);
+}
+.titleHead{
+    font-size: 30px;
+    font-weight: 600;
+}
+.headerTitle{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.headLinkFlex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.headLinkText{
+    text-decoration: none;
+    color: black;
+}
+.headLinkText:hover{
+    color: gray;
+}
+.header{
+    border-bottom:  1px solid rgb(0, 0, 0,.1) ;
+}
+.card1ImgBox{
+    border-radius: 3px;
+    width: 250px;
+    height: 180px;
+}
+.cardImgBox{
+    margin-right: 10px;
+    border-radius: 3px;
+    width: 343px;
+    height: 180px;
+}
+.cardContain{
+    width: 200px;
+}
+.cardTitle{
+    width: 250px;
+    font-size: 25px;
+    font-weight: 600;
+    color: #404040;
+
+}
+.cardDec{
+    font-size: 14px;
+    color: #908D8D;
+}
+.cardDate{
+    color: #404040;
+    font-size: 16px;
+
+}
+
+.grid-container {
+    display: flex;
+    flex-direction: row;
+    background-color: #2196F3;
+    /* padding: 10px; */
+  }
+  
+  .grid-item {
+     
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    /* padding: 20px; */
+    font-size: 30px;
+  }
+  
+  .item1 {
+    position: relative;
+    height: 340px;
+    width:600px;
+  }
+  .item1Image{
+      position:absolute ;
+      width:600px;
+    height: 340px;
+    left:0;
+    top:0;
+  }
+  .item1Txt{
+    position:absolute ;
+    top:50px;
+ left:100px
+}
+  .item2 {
+        height: 165px ;
+        width: 461px ;
+        margin:3px 6px ;
+       
+  }
+  
+
+  .homeLatestTxt{
+      margin:30px 0px;
+        display: flex;
+        flex-direction: row;
+        font-size: 25px;
+        font-weight: 600;
+      
+  }
+  .articleHtext{
+    margin-right: 5px;
+      width: 67px;
+     border-bottom: 3px pink solid;
+
+  }
+  .TxtBorder{
+      margin-right: 5px;
+      width: 40px;
+     border-bottom: 3px pink solid;
+  }
+  .ArtFlxCol{
+    border-top:  1px solid rgb(0, 0, 0,.1) ;
+    width: 700px;
+    padding: 30px 5px 0px 0px;
+  }
+  .artVerticleImg{
+      
+      width: 700px;
+      height: 350px;
+  }
+  .Advertistement{
+      margin-top: 30px;
+      width: 300px;
+    height: 509px;
+    border: 2px black solid;
+
+  }
+  .card1ImgBox{
+    border-radius: 3px;
+    width: 250px;
+    height: 180px;
+}
+  .marginLeft{margin-left: 30px; }
+ 
+.topArtContainer{
+  width: 300px;
+  height: 250px;
+} 
+.topArtImgBox{
+  margin-right: 10px;
+  border-radius: 3px;
+  width: 300px;
+  height: 180px;
+}
+.topArtImgBox2{
+  margin-right: 10px;
+  border-radius: 3px;
+  width: 80px;
+  height: 80px;
+}
+.top1ArtTitle{
+  font-weight: 600;
+   margin-right: 10px;
+  border-radius: 3px;
+  width: 218px;
+  height: 70px;}
+.topArtTitle{
+  font-weight: 600;
+  margin-right: 10px;
+  border-radius: 3px;
+  width: 130px;
+  height: 80px;
+}
+.topArtIndex{
+  font-size: 35px;
+  color: #e4e1e1;
+  margin-right: 10px;
+  border-radius: 3px;
+  width: 60px;
+  height: 70px;
+}
+.loadMore {
+  margin: 5px 20px 9px;
+  border: none;
+  /* background: #1e5f1e; */
+  border-radius: 4px;
+  height: 20px;
+  padding: 3px;
+  color: burlywood;
+}

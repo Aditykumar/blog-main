@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
-
+import './Components/Style/Style.css';
+import Header from './Components/Header';
+import Home from'./Components/Home';
+import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
+import Bollywood from './Components/Catagory/Bollywood';
+import Hollywood from './Components/Catagory/Hollywood';
+import Fitness from './Components/Catagory/Fitness';
+import Food from './Components/Catagory/Food';
+import Technology from './Components/Catagory/Technology';
+import {DataProvider} from './Components/Catagory/CatContext'
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+    <DataProvider>
+      <Router>
+       <Header/>
+          <Routes>
+            <Route path='/' element={<Home/>}/>
+            <Route path='/home' element={<Home/>}/>
+            <Route path='/bollywood' element={<Bollywood/>}/>
+            <Route path='/hollywood' element={<Hollywood/>}/>
+            <Route path='/technology' element={<Technology/>}/>
+            <Route path='/fitness' element={<Fitness/>}/>
+            <Route path='/food' element={<Food/>}/>
+          </Routes>
+    </Router>
+   </DataProvider>
     </div>
   );
 }

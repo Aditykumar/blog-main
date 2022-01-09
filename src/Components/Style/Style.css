@@ -56,7 +56,7 @@ body{
 }
 .cardTitle{
     width: 250px;
-    font-size: 25px;
+    font-size: 24px;
     font-weight: 600;
     color: #404040;
 
@@ -199,4 +199,29 @@ body{
   height: 20px;
   padding: 3px;
   color: burlywood;
+}
+.readJustifyCenter{
+ justify-content: center;
+}
+.readArtImg{
+  margin: 20px;
+  border-radius:12px ;
+  width: 310px;
+  height: 200px;
+}
+.ReadArtBox{
+  width: 350px;
+}
+.txtAlignCenter {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 600;
+  color: gray;
+}
+
+
+.borderShadow {
+    border: 2px solid rgb(223, 219, 219,.5);
+    margin-top: 30px;
+    padding: 5px;
 }

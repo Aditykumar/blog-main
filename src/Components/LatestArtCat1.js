@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react'
+import {Link} from 'react-router-dom'
 import { CatContext } from './Catagory/CatContext'
 function LatestArtCat1() {
     const bolly3 = []
@@ -10,7 +11,10 @@ function LatestArtCat1() {
         if (a.Category === "bollywood") {
             bollyAll.push({
                 name: a.Name,
-                img: a.Img
+                img: a.Img,
+                id:a.Id,
+                date:a.Date,
+                detail:a.Details
             })
         }
 
@@ -19,7 +23,10 @@ function LatestArtCat1() {
         if (index < 4) {
             bolly3.push({
                 name: a.name,
-                img: a.img
+                img: a.img,
+                id:a.id,
+                date:a.date,
+                detail:a.detail
             })
         }
 
@@ -34,31 +41,31 @@ function LatestArtCat1() {
         SetVisible(false)
         setResult(bolly3)
     }
-    console.log("ssss", result);
+    console.log("ssss", bolly3);
     return (
         <div>
                 {visible ? <>{bollyAll.map((raa) => 
-                            <div className='FlexRow'>
-                                <div > <img className='cardImgBox' src={raa.img}alt=""/> </div>
+                            <div  key={raa.id} className='FlexRow'>
+                                <div  style={{cursor:"pointer"}}><Link to={`/artReading/${raa.id}`}> <img className='cardImgBox' src={raa.img}alt=""/></Link> </div>
                                 <div>
                                     <div className='cardTitle'>{raa.name}</div>
-                                    <div className='cardDec cardContain'>dec:</div>
-                                    <p className='cardDate'>date<span className='cardDec'> /</span></p>
+                                    <div className='cardDec cardContain'>About : {raa.detail.slice(0,110)}</div>
+                                    <p className='cardDate'>Released Date<span className='cardDec'>/ {raa.date} </span></p>
                                </div>
                            </div>
                         ) }
-                      <button className='loadMore' onClick={loadLess} >&#8593; Load Less </button> </>
+                      <button  style={{cursor:"pointer"}} className='loadMore' onClick={loadLess} >&#8593; Load Less </button> </>
                     :<>{bolly3.map((ra)=> 
-                        <div className='FlexRow' >
-                            <div > <img className='cardImgBox' src={ra.img}alt=""/> </div>
+                        <div key={ra.id}  className='FlexRow' >
+                            <div  style={{cursor:"pointer"}}> <Link to={`/artReading/${ra.id}`}> <img className='cardImgBox' src={ra.img}alt=""/></Link> </div>
                             <div>
                                 <div className='cardTitle'>{ra.name}</div>
-                                <div className='cardDec cardContain'>dec:</div>
-                                <p className='cardDate'>date<span className='cardDec'> /</span></p>
+                                <div className='cardDec cardContain'>About : {ra.detail.slice(0,110)}</div>
+                                <p className='cardDate'>Released Date<span className='cardDec'> / {ra.date}</span></p>
                             </div>
                         </div>
                         )} 
-                    <button className='loadMore' onClick={loadMore} >&#8595; Load More</button></>
+                    <button  style={{cursor:"pointer"}} className='loadMore' onClick={loadMore} >&#8595; Load More</button></>
                 
                 }
         </div>

@@ -5,24 +5,33 @@ function FeaturedArticle() {
     let item2=[]
     let item3=[]
     const [data] = useContext(CatContext)
-    data.forEach((div1)=>{
-        let key =div1.Id
+    data.forEach((a)=>{
+        let key =a.Id
         switch (key) {
             case "17":
                 item1.push({
-                    name:div1.Name,
-                    img:div1.Img
+                    name: a.Name,
+                    img: a.Img,
+                    id:a.Id,
+                    date:a.Date,
+                    detail:a.Details
                 })
                 break;
                 case "2":
                 item2.push({
-                    name:div1.Name,
-                    img:div1.Img
+                    name: a.Name,
+                    img: a.Img,
+                    id:a.Id,
+                    date:a.Date,
+                    detail:a.Details
                 })
                 break;case "22":
                 item3.push({
-                    name:div1.Name,
-                    img:div1.Img
+                    name: a.Name,
+                    img: a.Img,
+                    id:a.Id,
+                    date:a.Date,
+                    detail:a.Details
                 })
                 break;
         
@@ -44,6 +53,7 @@ function FeaturedArticle() {
                   <div class="grid-item item1" >
                       <img className='item1Image' src= {data.img} alt="" />
                       <div className='item1Txt'>{data.name}</div>
+                      <div className='item1Txt'>{data.date}</div>
                     </div>
                 
              )}  <div>

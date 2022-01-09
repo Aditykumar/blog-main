@@ -19,7 +19,7 @@ function Home() {
                 <div className='ArtFlxCol'>
                   <LatestArtCat1/>
                 <div >
-                    <img className='artVerticleImg' alt='gallary' src="https://imgr.search.brave.com/eTddN7oqGFYp2K7gNbCO9jsVg-xyD4Tf0UnFNfYp-YU/fit/759/225/ce/1/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5i/UEJDZ3ZwOU4wU1Vi/VllKbkJnMklRSGFF/byZwaWQ9QXBp" /> 
+                    <img className='artVerticleImg' alt='gallary' src="https://i0.wp.com/buildesign.co.ke/wp-content/uploads/2018/01/W3A5833-Copy.jpg" /> 
                 </div>
                 </div>
                 <div className='marginLeft'>

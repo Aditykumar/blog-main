@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom'
 import React, { useContext, useState } from 'react'
 import { CatContext } from './Catagory/CatContext'
 function LatestArtCat2() {
@@ -10,7 +11,10 @@ function LatestArtCat2() {
         if (a.Category === "fitness") {
             fitnessAll.push({
                 name: a.Name,
-                img: a.Img
+                img: a.Img,
+                id:a.Id,
+                date:a.Date,
+                detail:a.Details
             })
         }
 
@@ -19,7 +23,10 @@ function LatestArtCat2() {
         if (index < 3) {
             fitness3.push({
                 name: a.name,
-                img: a.img
+                img: a.img,
+                id:a.id,
+                date:a.date,
+                detail:a.detail
             })
         }
 
@@ -39,27 +46,27 @@ function LatestArtCat2() {
         
              <div className='FlexRow'>
                 {visible ? <>{fitnessAll.map((latest) => 
-                            <div>
-                                <div > <img className='cardImgBox' src={latest.img}alt=""/> </div>
+                            <div  key={latest.id}>
+                                <div style={{cursor:"pointer"}} > <Link to={`/artReading/${latest.id}`}><img className='cardImgBox' src={latest.img}alt=""/> </Link></div>
                                 <div>
                                     <div className='cardTitle'>{latest.name}</div>
-                                    <span className='cardDec '>dec:</span>
-                                    <p className='cardDate'>date<span className='cardDec'> /</span></p>
-                               </div>
+                                    <span className='cardDec '>About: {latest.detail.slice(0,30)} ...</span>
+                                     <p className='cardDate'>Article Date<span className='cardDec'> / {latest.date}</span></p>
+                              </div>
                            </div>
                         ) }
-                      <button className='loadMore' onClick={loadLess} > View Less &#8592;</button> </>
+                      <button style={{cursor:"pointer"}} className='loadMore' onClick={loadLess} > View Less &#8592;</button> </>
                     :<>{fitness3.map((latest) => 
-                        <div>
-                            <div > <img className='cardImgBox' src={latest.img}alt=""/> </div>
+                        <div key={latest.id}>
+                                <div style={{cursor:"pointer"}} > <Link to={`/artReading/${latest.id}`}><img className='cardImgBox' src={latest.img}alt=""/> </Link></div>
                             <div>
                                 <div className='cardTitle'>{latest.name}</div>
-                                <span className='cardDec '>dec:</span>
-                                <p className='cardDate'>date<span className='cardDec'> /</span></p>
+                                <span className='cardDec '>About: {latest.detail.slice(0,30)} ...</span>
+                                <p className='cardDate'>Article Date<span className='cardDec'> / {latest.date}</span></p>
                            </div>
                        </div>
                     ) }
-                    <button className='loadMore' onClick={loadMore} > View More &#8594;</button></>
+                    <button style={{cursor:"pointer"}} className='loadMore' onClick={loadMore} > View More &#8594;</button></>
                 
                 }
         </div>

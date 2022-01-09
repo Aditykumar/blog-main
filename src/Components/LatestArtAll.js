@@ -1,26 +1,36 @@
+import {Link} from 'react-router-dom'
 import React, { useContext } from 'react'
 import { CatContext } from './Catagory/CatContext'
 function LatestArtAll() {
-    const latest3 = []
+    const latest = []
     const [data] = useContext(CatContext)
-    data.map((a, index) => {
+    data.forEach((a, index) => {
         if (index >= data.length - 3) {
-            latest3.push(a)
+            latest.push(
+                {
+                    name: a.Name,
+                    img: a.Img,
+                    id:a.Id,
+                    date:a.Date,
+                    detail:a.Details
+                }
+            )
         }
 
     })
-    console.log(latest3);
+    console.log(latest);
     return (
-        <div>
+        <div >
             <div className='FlexRow'>
             {
-            latest3.map((latest)=>
-            <div>
-            <div > <img className='cardImgBox' src={latest.Img} alt="" /> </div>
+            latest.map((latest)=>
+            <div  key={latest.id}>
+                      <div style={{cursor:"pointer"}} > <Link to={`/artReading/${latest.id}`}><img className='cardImgBox' src={latest.img}alt=""/> </Link></div>
+
                     <div >
-                        <div className='cardTitle'>{latest.Name}</div>
-                        <span className='carDec'></span>
-                        <p className='cardDate'>Publish Date<span className='cardDec'> / </span></p>
+                    <div className='cardTitle'>{latest.name}</div>
+                                    <span className='cardDec '>About: {latest.detail.slice(0,30)} ...</span>
+                                     <p className='cardDate'>Article Date<span className='cardDec'> / {latest.date}</span></p>
                     </div>
             </div>
             ) }

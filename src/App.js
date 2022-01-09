@@ -7,6 +7,7 @@ import Hollywood from './Components/Catagory/Hollywood';
 import Fitness from './Components/Catagory/Fitness';
 import Food from './Components/Catagory/Food';
 import Technology from './Components/Catagory/Technology';
+import ArtReading from './Components/ArtReading';
 import {DataProvider} from './Components/Catagory/CatContext'
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Routes>
             <Route path='/' element={<Home/>}/>
             <Route path='/home' element={<Home/>}/>
+            <Route path='/artReading/:id' element={<ArtReading/>}/>
             <Route path='/bollywood' element={<Bollywood/>}/>
             <Route path='/hollywood' element={<Hollywood/>}/>
             <Route path='/technology' element={<Technology/>}/>

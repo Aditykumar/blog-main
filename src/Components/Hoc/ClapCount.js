@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import UpdateComponet from './ClapHoc';
-import clap from '../../../logo/clap.png'
+import clap from '../../logo/clap.png'
 
 
  class ClapCount extends Component {

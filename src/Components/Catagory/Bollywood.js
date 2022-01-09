@@ -1,5 +1,8 @@
 import React, { useContext } from 'react'
 import { CatContext } from './CatContext'
+import { Link } from 'react-router-dom'
+import TopArtWebsite from '../TopArtWebsite'
+
 function Bollywood() {
   const content = []
   const [data] = useContext(CatContext)
@@ -9,15 +12,12 @@ function Bollywood() {
     if (cat.Category === "bollywood") {
       console.log(cat);
       content.push({
-            id: cat.Id,
-            name: cat.Name,
-            img: cat.Img,
-            directed: cat.Directed,
-            released: cat.Released,
-            types: cat.Types,
-            stars: cat.Stars,
-            imdb: cat.Imdb,
-            story: cat.Story
+        id: cat.Id,
+        name: cat.Name,
+        img: cat.Img,
+        detail: cat.Details,
+        about: cat.About,
+        date: cat.Date
       });
     }
   });
@@ -26,26 +26,29 @@ function Bollywood() {
 
 
   return (
-    <div>
+    <div className='FlexRow'>
+      <div>
 
+        {content.map((row) =>
+          <div key={row.id} className='FlexRow' >
+            <div style={{ cursor: "pointer" }}> <Link to={`/artReading/${row.id}`}> <img className='cardImgBox' src={row.img} alt="" /></Link> </div>
+            <div>
+              <div className='cardTitle'>{row.name}</div>
+              <div className='cardDec cardContain'>
+                <div>{row.detail}</div>
 
-      {content.map((row) =>
-            <div className='FlexRow' >
-              <div > <img className='cardImgBox' src={row.img} alt="" /> </div>
-              <div>
-                <div className='cardTitle'>{row.name}</div>
-                <div className='cardDec cardContain'>
-                  <div>{row.directed}</div>
-                  <div>{row.stars}</div>
-                  <div>{row.imdb}</div>
-                  <div>{row.types}</div>
-
-                </div>
-                <p className='cardDate'>Released Date<span className='cardDec'> / {row.released}</span></p>
               </div>
-
+              <p className='cardDate'>Released Date<span className='cardDec'> / {row.date}</span></p>
             </div>
-          )}
+
+          </div>
+        )}
+      </div>
+      <div style={{ margin: "76px" }} >
+        <div className='Advertistement'>Advertistement</div>
+        <div className='homeLatestTxt'><div className='TxtBorder'>The </div> Top</div>
+        <TopArtWebsite />
+      </div>
     </div>
   )
 }

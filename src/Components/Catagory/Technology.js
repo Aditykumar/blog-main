@@ -1,5 +1,8 @@
 import React, { useContext } from 'react'
+import { Link } from 'react-router-dom'
 import { CatContext } from './CatContext'
+import TopArtWebsite from '../TopArtWebsite'
+
 function Technology() {
   const content = []
   const [data] = useContext(CatContext)
@@ -12,12 +15,9 @@ function Technology() {
         id: cat.Id,
         name: cat.Name,
         img: cat.Img,
-        directed: cat.detail.Directed,
-        released: cat.Released,
-        types: cat.Types,
-        stars: cat.Stars,
-        imdb: cat.Imdb,
-        story: cat.Story
+        detail: cat.Details,
+        about: cat.About,
+        date: cat.Date
       });
     }
   });
@@ -26,26 +26,29 @@ function Technology() {
 
 
   return (
-    <div>
+    <div className='FlexRow'>
+      <div>
+        {content.map((row) =>
+          <div key={row.id} className='FlexRow' >
+            <div style={{ cursor: "pointer" }}> <Link to={`/artReading/${row.id}`}> <img className='cardImgBox' src={row.img} alt="" /></Link> </div>
+            <div>
+              <div className='cardTitle'>{row.name}</div>
+              <div className='cardDec cardContain'>
+                <div>{row.detail}</div>
 
 
-      {content.map((row) =>
-            <div className='FlexRow' >
-              <div > <img className='cardImgBox' src={row.img} alt="" /> </div>
-              <div>
-                <div className='cardTitle'>{row.name}</div>
-                <div className='cardDec cardContain'>
-                  <div>{row.directed}</div>
-                  <div>{row.stars}</div>
-                  <div>{row.imdb}</div>
-                  <div>{row.story.slice(0,50)}</div>
-
-                </div>
-                <p className='cardDate'>Released Date<span className='cardDec'> / {row.released}</span></p>
               </div>
-
+              <p className='cardDate'>Launch Date<span className='cardDec'> / {row.date}</span></p>
             </div>
-          )}
+
+          </div>
+        )}
+      </div>
+      <div style={{ margin: "50px" }} >
+        <div className='Advertistement'>Advertistement</div>
+        <div className='homeLatestTxt'><div className='TxtBorder'>The </div> Top</div>
+        <TopArtWebsite />
+      </div>
     </div>
   )
 }

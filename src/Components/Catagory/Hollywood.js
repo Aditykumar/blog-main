@@ -29,7 +29,7 @@ function Hollywood() {
 
 
   return (
-    <div className='FlexRow'>
+    <div className='FlexRow1'>
       <div>
         {content.map((row) =>
           <div key={row.id} className='FlexRow' >
@@ -46,7 +46,7 @@ function Hollywood() {
           </div>
         )}
       </div>
-      <div style={{ margin: "146px" }} >
+      <div>
         <div className='Advertistement'>Advertistement</div>
         <div className='homeLatestTxt'><div className='TxtBorder'>The </div> Top</div>
         <TopArtWebsite />

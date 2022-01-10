@@ -27,7 +27,7 @@ function Technology() {
 
 
   return (
-    <div className='FlexRow'>
+    <div className='FlexRow1'>
       <div>
         {content.map((row) =>
           <div key={row.id} className='FlexRow' >
@@ -45,7 +45,7 @@ function Technology() {
           </div>
         )}
       </div>
-      <div style={{ margin: "136px" }} >
+      <div>
         <div className='Advertistement'>Advertistement</div>
         <div className='homeLatestTxt'><div className='TxtBorder'>The </div> Top</div>
         <TopArtWebsite />

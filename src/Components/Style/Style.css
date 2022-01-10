@@ -9,6 +9,7 @@ body{
 
 }
 .FlexRow1{
+  justify-content: space-between;
   flex-wrap: wrap;
   display: flex;
   flex-direction: row;
@@ -325,7 +326,7 @@ display: none;
 
 }
 .topArtContainer{
-  width: 580px;
+  width: 320px;
  height: 0%;
 } 
 .cardImgBox {
@@ -360,9 +361,16 @@ height: 40px;
   font-size: 10px;
   
 }
-.marginLeft{margin-left: 0px; }
+.marginLeft{margin: 0px; }
 
 .ArtFlxCol {
   width: 355px;
+}
+.topArtTitle {
+  font-weight: 600;
+  margin-right: 10px;
+  border-radius: 3px;
+  width: 120px;
+  height: 80px;
 }
 }

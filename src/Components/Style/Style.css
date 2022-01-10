@@ -325,5 +325,8 @@ display: none;
 .ClapFixed {
   display: none;
 }
+.artVerticleImg {
+  height: 350px;
+}
 
 }

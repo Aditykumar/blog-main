@@ -301,18 +301,18 @@ height: 250px;
 .cardContain{
   width: 200px;
 }
-.cardTitle{
- text-align: center;
-
-font-size: 17px;
-}
-.cardDec{
+.cardTitle {
+  margin-left: 37px;
   text-align: center;
-
+  font-size: 17px;
 }
-.cardDate{
+.cardDec {
   text-align: center;
-
+  width: 335px;
+}
+.cardDec {
+  text-align: center;
+  width: 335px;
 }
 .Advertistement{
 display: none;
@@ -325,7 +325,7 @@ display: none;
 .cardImgBox {
   margin-right: 10px;
   border-radius: 25px;
-  width: 438px;
+  width: 353px;
   height: 158px;
 }
 .ClapFixed {
@@ -333,7 +333,17 @@ display: none;
 }
 
 .artVerticleImg {
-  width: 544px;
+  width: 353px;
   height: 350px;
+}
+.headLinkFlex {
+  font-size: 13px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.FlexRow {
+  display: flex;
+  flex-direction: column;
 }
 }

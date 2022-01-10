@@ -164,7 +164,7 @@ export const DataProvider = (props) => {
             Name: " Artificial Intelligence (AI) and Machine Learning ",
             Date: " 1956 ",
             Img: "https://image.shutterstock.com/image-vector/artificial-intelligence-humanoid-head-neural-260nw-1384554629.jpg",
-            Details: "",
+            Details: "AI was first coined by John McCarthy",
             About: " Artificial intelligence (AI) is a wide-ranging branch of computer science concerned with building smart machines capable of performing tasks that typically require human intelligence.AI is a computer system able to perform tasks that ordinarily require human intelligence... Many of these artificial intelligence systems are powered by machine learning, some of them are powered by deep learning and some of them are powered by very boring things like rules. There are four types (i) Reactive Machines (ii) Limited Memory (iii) Theory of Mind  (iv) Self-Awareness Examples: Siri, Alexa, Self-driving cars, Email spam filters, Netflix's recommendations."
         },
 
@@ -174,7 +174,7 @@ export const DataProvider = (props) => {
             Name: " Robotic Process Automation (RPA) ",
             Date: " early 2000s ",
             Img: "https://www.hult.edu/blog/media/uploads/2020/03/robotic-process-automation-business-RPA.jpg",
-            Details: "",
+            Details: "RPA is technology given by Arthur Samuel",
             About: "Robotic process automation (RPA) is a software technology that makes it easy to build, deploy, and manage software robots that emulate humans actions interacting with digital systems and software. RPA is used to automate various supply chain processes, including data entry, predictive maintenance and after-sales service support. RPA is used across industries to automate high volume, rote tasks. Telecommunications companies use RPA to configure new services and the associated billing systems for new accounts. While each RPA process depends on the needs and maturity of your organization, implementation typically includes the following phases: Phase 1 - Assess for RPA Opportunities. Phase 2 - Select a Vendor. Phase 3 - Capture Process Steps, Pilot, and Implement. Phase 4 - Manage the RPA Lifecycle. "
         },
 

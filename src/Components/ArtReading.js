@@ -71,7 +71,7 @@ function ArtReading() {
                         <div>
                             <div className='cardTitle'>{latest.name}</div>
                             <span className='cardDec '>About : {latest.detail.slice(0, 30)} </span>
-                            <p className='cardDate'>Launch Date<span className='cardDec'>/ {latest.date}</span></p>
+                            <p className='cardDate'>{latest.category}<span className='cardDec'>/ {latest.date}</span></p>
                         </div>
                     </div>
                 )}

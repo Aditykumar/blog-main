@@ -4,7 +4,7 @@ import { CatContext } from './Catagory/CatContext'
 function LatestArtCat1() {
     const bolly3 = []
     const bollyAll = []
-    const [result, setResult] = []
+    const  setResult = []
     const [visible, SetVisible] = useState(false)
     const [data] = useContext(CatContext)
     data.forEach((a) => {
@@ -14,7 +14,9 @@ function LatestArtCat1() {
                 img: a.Img,
                 id:a.Id,
                 date:a.Date,
-                detail:a.Details
+                detail:a.Details,
+                category:a.Category
+
             })
         }
 
@@ -26,7 +28,9 @@ function LatestArtCat1() {
                 img: a.img,
                 id:a.id,
                 date:a.date,
-                detail:a.detail
+                detail:a.detail,
+                category:a.category
+
             })
         }
 
@@ -50,7 +54,7 @@ function LatestArtCat1() {
                                 <div>
                                     <div className='cardTitle'>{raa.name}</div>
                                     <div className='cardDec cardContain'>About : {raa.detail.slice(0,110)}</div>
-                                    <p className='cardDate'>Released Date<span className='cardDec'>/ {raa.date} </span></p>
+                                    <p className='cardDate'>{raa.category}<span className='cardDec'> / {raa.date} </span></p>
                                </div>
                            </div>
                         ) }
@@ -61,7 +65,7 @@ function LatestArtCat1() {
                             <div>
                                 <div className='cardTitle'>{ra.name}</div>
                                 <div className='cardDec cardContain'>About : {ra.detail.slice(0,110)}</div>
-                                <p className='cardDate'>Released Date<span className='cardDec'> / {ra.date}</span></p>
+                                <p className='cardDate'>{ra.category}<span className='cardDec'> / {ra.date}</span></p>
                             </div>
                         </div>
                         )} 

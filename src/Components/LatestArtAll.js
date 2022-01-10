@@ -12,7 +12,9 @@ function LatestArtAll() {
                     img: a.Img,
                     id:a.Id,
                     date:a.Date,
-                    detail:a.Details
+                    detail:a.Details,
+                    category:a.Category
+
                 }
             )
         }
@@ -30,7 +32,7 @@ function LatestArtAll() {
                     <div >
                     <div className='cardTitle'>{latest.name}</div>
                                     <span className='cardDec '>About: {latest.detail.slice(0,30)} ...</span>
-                                     <p className='cardDate'>Article Date<span className='cardDec'> / {latest.date}</span></p>
+                                     <p className='cardDate'>{latest.category}<span className='cardDec'> / {latest.date}</span></p>
                     </div>
             </div>
             ) }

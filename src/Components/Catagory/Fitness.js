@@ -17,7 +17,8 @@ function Fitness() {
         img: cat.Img,
         detail: cat.Details,
         about: cat.About,
-        date: cat.Date
+        date: cat.Date,
+        category: cat.Category
       });
     }
   });
@@ -39,7 +40,7 @@ function Fitness() {
                 <div>{row.detail}</div>
 
               </div>
-              <p className='cardDate'>Article Date<span className='cardDec'> / {row.date}</span></p>
+              <p className='cardDate'>{row.category}<span className='cardDec'> / {row.date}</span></p>
             </div>
 
           </div>

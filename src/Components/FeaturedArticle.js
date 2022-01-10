@@ -14,7 +14,9 @@ function FeaturedArticle() {
                     img: a.Img,
                     id: a.Id,
                     date: a.Date,
-                    detail: a.Details
+                    detail: a.Details,
+                    category:a.Category
+
                 })
                 break;
             case "18":
@@ -23,7 +25,9 @@ function FeaturedArticle() {
                     img: a.Img,
                     id: a.Id,
                     date: a.Date,
-                    detail: a.Details
+                    detail: a.Details,
+                    category:a.Category
+
                 })
                 break; case "32":
                 item2.push({
@@ -31,7 +35,9 @@ function FeaturedArticle() {
                     img: a.Img,
                     id: a.Id,
                     date: a.Date,
-                    detail: a.Details
+                    detail: a.Details,
+                    category:a.Category
+                 
                 })
                 break;
 
@@ -52,7 +58,7 @@ function FeaturedArticle() {
                 <div  key={data.id}class="FeatureBox1" >
                     <Link to={`/artReading/${data.id}`}><img style={{cursor:"pointer"}} className='FeatureImgBox1' src={data.img} alt="" /></Link>
                     <div className='box1Txt'>{data.name}</div>
-                    <div className='box1TxtDate'>Date / {data.date}</div>
+                    <div className='box1TxtDate'>{data.category} / {data.date}</div>
                 </div>
 
             )}
@@ -61,7 +67,7 @@ function FeaturedArticle() {
                 <div  key={data.id} className='FeatureBox2'>
                    <Link to={`/artReading/${data.id}`}> <img className='FeatureImgBox2' src= {data.img} alt="" /></Link>
                     <div class="box2Txt">{data.name}</div>
-                    <div className='box2TxtDate'>Date / {data.date}</div>
+                    <div className='box2TxtDate'> {data.category} / {data.date}</div>
                 </div>
                 )}
             </div>

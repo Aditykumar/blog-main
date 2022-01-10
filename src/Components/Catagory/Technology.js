@@ -17,7 +17,8 @@ function Technology() {
         img: cat.Img,
         detail: cat.Details,
         about: cat.About,
-        date: cat.Date
+        date: cat.Date,
+        category:cat.Category
       });
     }
   });
@@ -38,7 +39,7 @@ function Technology() {
 
 
               </div>
-              <p className='cardDate'>Launch Date<span className='cardDec'> / {row.date}</span></p>
+              <p className='cardDate'>{row.category}<span className='cardDec'> / {row.date}</span></p>
             </div>
 
           </div>

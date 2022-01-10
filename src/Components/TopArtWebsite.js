@@ -14,7 +14,8 @@ function TopArtWebsite() {
                     img: a.Img,
                     id:a.Id,
                     date:a.Date,
-                    detail:a.Details
+                    detail:a.Details,
+                    category:a.category
                 })
                 break;
                 case "11":
@@ -23,7 +24,8 @@ function TopArtWebsite() {
                         img: a.Img,
                         id:a.Id,
                         date:a.Date,
-                        detail:a.Details
+                        detail:a.Details,
+                        category:a.Category
                 })
                 break;
                 case "22":
@@ -32,7 +34,8 @@ function TopArtWebsite() {
                     img: a.Img,
                     id:a.Id,
                     date:a.Date,
-                    detail:a.Details
+                    detail:a.Details,
+                    category:a.Category
                 })
                 break;
                 case "40":
@@ -41,7 +44,8 @@ function TopArtWebsite() {
                     img: a.Img,
                     id:a.Id,
                     date:a.Date,
-                    detail:a.Details
+                    detail:a.Details,
+                    category:a.Category
                 })
                 break; 
                
@@ -64,7 +68,7 @@ function TopArtWebsite() {
                         <div className='FlexRow'>   
                              <div className='top1ArtTitle'>  
                                 <div >{ra.name}</div>
-                                <p className='cardDate'>Date<span className='cardDec'> / {ra.date}</span></p>
+                                <p className='cardDate'>{ra.category}<span className='cardDec'> / {ra.date}</span></p>
                             </div>
                             <div className='topArtIndex'> {index+1}</div>
                          </div>
@@ -75,7 +79,7 @@ function TopArtWebsite() {
                    <div style={{cursor:"pointer"}}><Link to={`/artReading/${raa.id}`}>  <img className='topArtImgBox2' src={raa.img}alt="{raa.name}"/></Link></div>
                     <div className='topArtTitle'>
                         <div className=''>{raa.name.slice(0,15)}</div>
-                        <p className='cardDate'>Date<span className='cardDec'> / {raa.date}</span></p>
+                        <p className='cardDate'>{raa.category}<span className='cardDec'> / {raa.date}</span></p>
                     </div>
 
                    <div className='topArtIndex'> {index+2}</div> 

@@ -14,7 +14,9 @@ function LatestArtCat2() {
                 img: a.Img,
                 id:a.Id,
                 date:a.Date,
-                detail:a.Details
+                detail:a.Details,
+                category:a.Category
+
             })
         }
 
@@ -26,7 +28,9 @@ function LatestArtCat2() {
                 img: a.img,
                 id:a.id,
                 date:a.date,
-                detail:a.detail
+                detail:a.detail,
+                category:a.category
+
             })
         }
 
@@ -51,7 +55,7 @@ function LatestArtCat2() {
                                 <div>
                                     <div className='cardTitle'>{latest.name}</div>
                                     <span className='cardDec '>About: {latest.detail.slice(0,30)} ...</span>
-                                     <p className='cardDate'>Article Date<span className='cardDec'> / {latest.date}</span></p>
+                                     <p className='cardDate'>{latest.category}<span className='cardDec'>  / {latest.date}</span></p>
                               </div>
                            </div>
                         ) }
@@ -62,7 +66,7 @@ function LatestArtCat2() {
                             <div>
                                 <div className='cardTitle'>{latest.name}</div>
                                 <span className='cardDec '>About: {latest.detail.slice(0,30)} ...</span>
-                                <p className='cardDate'>Article Date<span className='cardDec'> / {latest.date}</span></p>
+                                <p className='cardDate'>{latest.category}<span className='cardDec'> / {latest.date}</span></p>
                            </div>
                        </div>
                     ) }

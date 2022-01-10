@@ -46,7 +46,7 @@ function Hollywood() {
           </div>
         )}
       </div>
-      <div style={{ margin: "76px" }} >
+      <div style={{ margin: "146px" }} >
         <div className='Advertistement'>Advertistement</div>
         <div className='homeLatestTxt'><div className='TxtBorder'>The </div> Top</div>
         <TopArtWebsite />

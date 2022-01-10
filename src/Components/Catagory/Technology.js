@@ -45,7 +45,7 @@ function Technology() {
           </div>
         )}
       </div>
-      <div style={{ margin: "50px" }} >
+      <div style={{ margin: "136px" }} >
         <div className='Advertistement'>Advertistement</div>
         <div className='homeLatestTxt'><div className='TxtBorder'>The </div> Top</div>
         <TopArtWebsite />

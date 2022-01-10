@@ -29,7 +29,7 @@ function LatestArtAll() {
                         <div key={latest.id}>
                             <div className='cardImgBox' style={{ cursor: "pointer" }} > <Link to={`/artReading/${latest.id}`}><img className='cardImgBox' src={latest.img} alt="" /> </Link></div>
 
-                            <div >
+                            <div style={{margin:"15px"}} >
                                 <div className='cardTitle'>{latest.name}</div>
                                 <div className='cardDec '>About: {latest.detail.slice(0, 30)} ...</div>
                                 <div className='cardDate'>{latest.category}<span className='cardDec'> / {latest.date}</span></div>

@@ -8,7 +8,7 @@ import TopArtWebsite from './TopArtWebsite'
 function Home() {
     
     return (
-        <div>
+        <div className='FlexRow'>
             <FeaturedArticle/>
             
             <div className='homeLatestTxt'><div className='TxtBorder'>The </div> Latest</div>

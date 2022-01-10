@@ -66,9 +66,9 @@ function TopArtWebsite() {
                     <div key={ra.id}>
                         <div style={{ cursor: "pointer" }}><Link to={`/artReading/${ra.id}`}> <img className='topArtImgBox' src={ra.img} alt="top" /></Link></div>
 
-                        <div className='FlexRow'>
+                        <div className='FlexRow1'>
                             <div className='top1ArtTitle'>
-                                <div >{ra.name}</div>
+                                <div>{ra.name}</div>
                                 <p className='cardDate'>{ra.category}<span className='cardDec'> / {ra.date}</span></p>
                             </div>
                             <div className='topArtIndex'> {index + 1}</div>
@@ -76,10 +76,10 @@ function TopArtWebsite() {
                     </div>
                 )}
                 {top3.map((raa, index) =>
-                    <div key={raa.id} className='FlexRow'>
+                    <div key={raa.id} className='FlexRow1'>
                         <div style={{ cursor: "pointer" }}><Link to={`/artReading/${raa.id}`}>  <img className='topArtImgBox2' src={raa.img} alt="{raa.name}" /></Link></div>
                         <div className='topArtTitle'>
-                            <div className=''>{raa.name.slice(0, 15)}</div>
+                            <div>{raa.name.slice(0, 15)}</div>
                             <p className='cardDate'>{raa.category}<span className='cardDec'> / {raa.date}</span></p>
                         </div>
 

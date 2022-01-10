@@ -8,6 +8,12 @@ body{
   flex-direction: row;
 
 }
+.FlexRow1{
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+
+}
 .flexCol{
   display: flex;
   flex-direction: column;
@@ -311,7 +317,7 @@ height: 250px;
   width: 335px;
 }
 .cardDate {
-  text-align: center;
+  /* text-align: center; */
   width: 335px;
 }
 .Advertistement{
@@ -325,7 +331,7 @@ display: none;
 .cardImgBox {
   margin-right: 10px;
   border-radius: 25px;
-  width: 353px;
+  width: 323px;
   height: 158px;
 }
 .ClapFixed {
@@ -347,13 +353,15 @@ display: none;
   flex-direction: column;
 }
 .loadMore {
-width: 84px;
-height: 20px;
+width: 100px;
+height: 40px;
 }
 .headLinkText {
   font-size: 10px;
   
 }
+.marginLeft{margin-left: 0px; }
+
 .ArtFlxCol {
   width: 355px;
 }

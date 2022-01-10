@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { CatContext } from './Catagory/CatContext'
 import { Link } from 'react-router-dom'
 import ClapCount from './Hoc/ClapCount'
+import avtar from '../logo/avtar.png'
 
 function ArtReading() {
     const { id } = useParams();
@@ -39,26 +40,40 @@ function ArtReading() {
 
     return (
         <div>
+            <div className="ClapFixed">
+                                <ClapCount />
+                                <br/>
+                                <div><i className="fas fa-share-alt"> </i>&nbsp; &nbsp;Share this article</div>
+                            </div>
             <div className="FlexRow readJustifyCenter ">
 
                 {data.filter((dataa) => dataa.Id === id).map((result) =>
                     <div className="ReadArtBox borderShadow">
+
+
                         <div className="txtAlignCenter">{result.Name}</div>
-                        <div>
-                            <img className="readArtImg" alt="Article" src={result.Img} />  
-                            <div><ClapCount /></div>
+                        <br />
+                        <div className="FlexRow jstSpaceBeetben">
+                            <div ><img alt="avter" style={{ width: "40px" }} src={avtar} /><i style={{ color: "gray" }}>Dmitry Nozhenko</i></div>
+                            <div><i className="fab fa-facebook-square"></i> &nbsp;<i className="fab fa-twitter-square"></i> &nbsp;<i className="fab fa-instagram"></i> &nbsp;<i class="fab fa-youtube-square"></i></div>
                         </div>
-                        <br/>
-                        <br/>
-                        <div className=" ReadArtBox">{result.Details}</div>
+                        <div>
+                            <img className="readArtImg" alt="Article" src={result.Img} />
+                            <div>   <ClapCount /> </div>
+                        </div>
+                        <br />
+                        <br />
+                        <div className=" ReadArtBox"><i>{result.Details}</i></div>
+                        <br />
+                        
                         <span>{result.About}</span>
                     </div>
 
                 )
                 }
 
-            </div>
-            <ClapCount />
+            </div >
+           <div style={{background:"white"}}>
             <div className='homeLatestTxt'><div className='articleHtext'>More </div> Latest  Article</div>
 
 
@@ -76,7 +91,7 @@ function ArtReading() {
                     </div>
                 )}
             </div>
-        </div>
+        </div></div>
     )
 }
 

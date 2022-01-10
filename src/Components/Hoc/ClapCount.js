@@ -10,7 +10,7 @@ import clap from '../../logo/clap.png'
         console.log(this.props);
         return (
             <div>
-                <div style={{cursor:"pointer"}} onClick={this.props.incrementCount}><img style={{width: "20px",height: "20px"}} alt='' src={clap} /> <span>{this.props.count}</span> </div>
+                <div style={{cursor:"pointer"}} onClick={this.props.incrementCount}><img style={{width: "20px",height: "20px"}} alt='' src={clap} /> <span>&nbsp;&nbsp; {this.props.count} claps</span> </div>
             </div>
         )
     }

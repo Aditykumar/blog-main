@@ -251,4 +251,79 @@ body{
     border: 2px solid rgb(223, 219, 219,.5);
     margin-top: 30px;
     padding: 5px;
+    
+}.jstSpaceBeetben{
+  justify-content: space-between;
+}
+.fa-facebook-square:before {
+  content: "\f082";
+  margin-left: 30px;
+}
+.fab:before{
+  cursor: pointer;
+}
+.ClapFixed {
+  position: absolute;
+  left: 64px;
+  top: 355px;
+}
+
+@media only screen and (max-width: 620px) {
+  
+
+.FeatureArtBox {
+  width: 100%;
+}
+.FeatureBox1 {
+height: 250px;
+  width:100%;
+}
+.FeatureImgBox1{
+    height: 250px;
+    width:100%;
+}
+.FeatureBox2 {
+  color: burlywood;
+ display: none;
+     
+}
+.FlexRow{
+  display: flex;
+ 
+}
+
+.cardContain{
+  width: 200px;
+}
+.cardTitle{
+ text-align: center;
+
+font-size: 17px;
+}
+.cardDec{
+  text-align: center;
+
+}
+.cardDate{
+  text-align: center;
+
+}
+.Advertistement{
+display: none;
+
+}
+.topArtContainer{
+  width: 580px;
+ height: 0%;
+} 
+.cardImgBox {
+  margin-right: 10px;
+  border-radius: 25px;
+  width: 295px;
+  height: 158px;
+}
+.ClapFixed {
+  display: none;
+}
+
 }

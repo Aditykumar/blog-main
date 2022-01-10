@@ -22,7 +22,7 @@ function Home() {
                     <img className='artVerticleImg' alt='gallary' src="https://i0.wp.com/buildesign.co.ke/wp-content/uploads/2018/01/W3A5833-Copy.jpg" /> 
                 </div>
                 </div>
-                <div className='marginLeft'>
+                <div className='  marginLeft'>
                     <div className='Advertistement'>Advertistement</div>
                     <div className='homeLatestTxt'><div className='TxtBorder'>The </div> Top</div>
                     <TopArtWebsite/>

@@ -53,7 +53,7 @@ function ArtReading() {
 
                         <div className="txtAlignCenter">{result.Name}</div>
                         <br />
-                        <div className="FlexRow jstSpaceBeetben">
+                        <div className="FlexRow1 jstSpaceBeetben">
                             <div ><img alt="avter" style={{ width: "40px" }} src={avtar} /><i style={{ color: "gray" }}>Dmitry Nozhenko</i></div>
                             <div><i className="fab fa-facebook-square"></i> &nbsp;<i className="fab fa-twitter-square"></i> &nbsp;<i className="fab fa-instagram"></i> &nbsp;<i class="fab fa-youtube-square"></i></div>
                         </div>

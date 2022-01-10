@@ -310,7 +310,7 @@ height: 250px;
   text-align: center;
   width: 335px;
 }
-.cardDec {
+.cardDate {
   text-align: center;
   width: 335px;
 }
@@ -345,5 +345,9 @@ display: none;
 .FlexRow {
   display: flex;
   flex-direction: column;
+}
+.loadMore {
+width: 84px;
+height: 20px;
 }
 }

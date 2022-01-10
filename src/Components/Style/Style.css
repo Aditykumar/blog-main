@@ -350,4 +350,11 @@ display: none;
 width: 84px;
 height: 20px;
 }
+.headLinkText {
+  font-size: 10px;
+  
+}
+.ArtFlxCol {
+  width: 355px;
+}
 }
